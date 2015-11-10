@@ -14,6 +14,7 @@ if exists("b:current_syntax")
     syn keyword     crbasicRepeat       DataTable EndTable BeginProg EndProg
     syn keyword     crbasicMath         Minimum Maximum Average StdDev Sample Totalize WindVector
     syn keyword     crbasicConditional  If Then Else EndIf Do Loop Until While Wend
+    syn keyword     crbasicLoops        Do Loop Until While Wend For Next
     syn keyword     crbasicConstants    True False
     syn region      crbasicComment      start="'" end="$" 
 
