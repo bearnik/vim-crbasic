@@ -25,6 +25,7 @@ if exists("b:current_syntax")
     hi def link     crbasicRepeat       Repeat
     hi def link     crbasicMath         Function
     hi def link     crbasicConditional  Conditional
+    hi def link     crbasicLoops        Conditional
     hi def link     crbasicConstants    Keyword
     hi def link     crbasicComment      Comment
 
