@@ -9,9 +9,9 @@ if exists("b:current_syntax")
     syn keyword     crbasicKeyword      Const Public Alias Units Dim As
     syn keyword     crbasicVarTypes     Float Long String Boolean
     syn keyword     crbasicDataTypes    FP2 IEEE4 FLOAT LONG UINT2 UINT4 BOOLEAN BOOL8 NSEC STRING
-    syn keyword     crbasicStatement    DataInterval Sample Include SlowSequence Scan NextScan
+    syn keyword     crbasicStatement    DataInterval Sample Include
     syn keyword     crbasicStatement    GetRecord TCPOpen SendVariables NetworkTimeProtocal
-    syn keyword     crbasicRepeat       DataTable EndTable BeginProg EndProg
+    syn keyword     crbasicRepeat       DataTable EndTable BeginProg EndProg SlowSequence EndSequence Scan NextScan
     syn keyword     crbasicMath         Minimum Maximum Average StdDev Sample Totalize WindVector
     syn keyword     crbasicConditional  If Then Else EndIf Do Loop Until While Wend
     syn keyword     crbasicLoops        Do Loop Until While Wend For Next
