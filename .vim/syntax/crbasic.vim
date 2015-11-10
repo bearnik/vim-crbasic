@@ -15,8 +15,9 @@ if exists("b:current_syntax")
     syn keyword     crbasicMath         Minimum Maximum Average StdDev Sample Totalize WindVector
     syn keyword     crbasicConditional  If Then Else EndIf Do Loop Until While Wend
     syn keyword     crbasicLoops        Do Loop Until While Wend For Next
-    syn keyword     crbasicConstants    True False
+    syn keyword     crbasicBools        True False
     syn region      crbasicComment      start="'" end="$" 
+    syn region      crbasicStrings      start='"' end='"'   
 
     hi def link     crbasicKeyword      Keyword 
     hi def link     crbasicVarTypes     Type 
@@ -26,7 +27,8 @@ if exists("b:current_syntax")
     hi def link     crbasicMath         Function
     hi def link     crbasicConditional  Conditional
     hi def link     crbasicLoops        Repeat 
-    hi def link     crbasicConstants    Constant 
+    hi def link     crbasicBools        Constant 
+    hi def link     crbasicStrings      String 
     hi def link     crbasicComment      Comment
 
     let b:current_syntax = "crbasic"
