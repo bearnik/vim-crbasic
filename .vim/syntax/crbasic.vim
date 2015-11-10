@@ -17,8 +17,41 @@ if exists("b:current_syntax")
     syn keyword     crbasicLoops        Do Loop Until While Wend For Next
     syn keyword     crbasicBools        True False
     syn keyword     crbasicTodo         contained TODO FIXME NOTE NOTES
-    syn match       crbasicComment      "'.*$" contains=crbasicTodo 
+    syn match       crbasicComment      "\v\'.*$" contains=crbasicTodo 
+    "syn region      crbasicComment      start="'" end="'"
     syn region      crbasicStrings      start='"' end='"'   
+
+" Matching Operators
+    syn match       crbasicOperator     "\v\*"
+    syn match       crbasicOperator     "\v\/"
+    syn match       crbasicOperator     "\v\+"
+    syn match       crbasicOperator     "\v-"
+    syn match       crbasicOperator     "\v\^"
+    syn match       crbasicOperator     "\v\&"
+    syn match       crbasicOperator     "\v\\"
+
+    syn match       crbasicOperator     "\v<"
+    syn match       crbasicOperator     "\v>"
+    syn match       crbasicOperator     "\v<>"
+    syn match       crbasicOperator     "\v>>"
+    syn match       crbasicOperator     "\v<<"
+    syn match       crbasicOperator     "\v>\="
+    syn match       crbasicOperator     "\v<\="
+
+    syn match       crbasicOperator     "\v\="
+    syn match       crbasicOperator     "\v\*\="
+    syn match       crbasicOperator     "\v\+\="
+    syn match       crbasicOperator     "\v-\="
+    syn match       crbasicOperator     "\v\^\="
+    syn match       crbasicOperator     "\v\\\="
+    syn match       crbasicOperator     "\v\/\="
+    syn match       crbasicOperator     "\v\&\="
+    syn match       crbasicOperator     "\v\!"
+
+    syn match       crbasicOperator     "\v(AND|IMP|INTDV|MOD|NOT|OR|XOR)"
+" End Matching Operators
+
+
 
     hi def link     crbasicKeyword      Keyword 
     hi def link     crbasicVarTypes     Type 
@@ -30,6 +63,7 @@ if exists("b:current_syntax")
     hi def link     crbasicLoops        Repeat 
     hi def link     crbasicBools        Constant 
     hi def link     crbasicStrings      String 
+    hi def link     crbasicOperator     Operator
     hi def link     crbasicComment      Comment
     hi def link     crbasicTodo         Todo
 
