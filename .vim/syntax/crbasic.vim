@@ -17,10 +17,14 @@ if exists("b:current_syntax")
     syn keyword     crbasicLoops        Do Loop Until While Wend For Next
     syn keyword     crbasicBools        True False
     syn keyword     crbasicTodo         contained TODO FIXME NOTE NOTES
+" Matching Comments
     syn match       crbasicComment      "\v\'.*$" contains=crbasicTodo 
-    "syn region      crbasicComment      start="'" end="'"
+" Matching Strings 
     syn region      crbasicStrings      start='"' end='"'   
+" Matching Numbers
 
+    syn match   crbasicNumber           "[-+]\=\d\+"
+    syn match   crbasicNumFloat         "[-+]\=\d\+\(\.\d*\)\=" 
 " Matching Operators
     syn match       crbasicOperator     "\v\*"
     syn match       crbasicOperator     "\v\/"
@@ -62,6 +66,8 @@ if exists("b:current_syntax")
     hi def link     crbasicConditional  Conditional
     hi def link     crbasicLoops        Repeat 
     hi def link     crbasicBools        Constant 
+    hi def link     crbasicNumber       Constant
+    hi def link     crbasicNumFloat     Float
     hi def link     crbasicStrings      String 
     hi def link     crbasicOperator     Operator
     hi def link     crbasicComment      Comment
