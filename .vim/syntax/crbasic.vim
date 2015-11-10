@@ -19,14 +19,14 @@ if exists("b:current_syntax")
     syn region      crbasicComment      start="'" end="$" 
 
     hi def link     crbasicKeyword      Keyword 
-    hi def link     crbasicVarTypes     Statement
-    hi def link     crbasicDataTypes    Statement 
+    hi def link     crbasicVarTypes     Type 
+    hi def link     crbasicDataTypes    Type 
     hi def link     crbasicStatement    Statement
     hi def link     crbasicRepeat       Repeat
     hi def link     crbasicMath         Function
     hi def link     crbasicConditional  Conditional
-    hi def link     crbasicLoops        Conditional
-    hi def link     crbasicConstants    Keyword
+    hi def link     crbasicLoops        Repeat 
+    hi def link     crbasicConstants    Constant 
     hi def link     crbasicComment      Comment
 
     let b:current_syntax = "crbasic"
