@@ -1,0 +1,6 @@
+/*.cr*
+!/.vim/syntax
+/.vim/syntax/*.swp
+!/.vim/ftdetect
+/.vim/ftdetect/*.swp
+
