@@ -16,7 +16,8 @@ if exists("b:current_syntax")
     syn keyword     crbasicConditional  If Then Else EndIf Do Loop Until While Wend
     syn keyword     crbasicLoops        Do Loop Until While Wend For Next
     syn keyword     crbasicBools        True False
-    syn region      crbasicComment      start="'" end="$" 
+    syn keyword     crbasicTodo         contained TODO FIXME NOTE NOTES
+    syn match       crbasicComment      "'.*$" contains=crbasicTodo 
     syn region      crbasicStrings      start='"' end='"'   
 
     hi def link     crbasicKeyword      Keyword 
@@ -30,5 +31,6 @@ if exists("b:current_syntax")
     hi def link     crbasicBools        Constant 
     hi def link     crbasicStrings      String 
     hi def link     crbasicComment      Comment
+    hi def link     crbasicTodo         Todo
 
     let b:current_syntax = "crbasic"
