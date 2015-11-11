@@ -1,6 +1,9 @@
 " Vim syntax file
-" Language: CRBasic
-" Filenames: *.cr1
+" Language:     CRBasic
+" Filenames:    *.cr1, *.cr2, *.cr8
+" Maintainer:   Nikolay Dinchev <bearnik@gmail.com>
+" URL:           https://github.com/bearnik/vim-crbasic
+" ------------------------------------------------------------
 
 if exists("b:current_syntax")
             finish
@@ -17,6 +20,7 @@ if exists("b:current_syntax")
     syn keyword     crbasicLoops        Do Loop Until While Wend For Next
     syn keyword     crbasicBools        True False
     syn keyword     crbasicTodo         contained TODO FIXME NOTE NOTES
+
 " Matching Comments
     syn match       crbasicComment      "\v\'.*$" contains=crbasicTodo 
 " Matching Strings 
@@ -59,6 +63,8 @@ if exists("b:current_syntax")
     syn match       crbasicFloat        "[-+]\=\<\d\+\.\d*\([eE][\-+]\=\d\+\)\="
     syn match       crbasicFloat        "[-+]\=\<\.\d\+\([eE][\-+]\=\d\+\)\="
 " End Matching Numbers
+" Matching brackets
+    syn match       crbasicBrackets    '[{}()\[\]]'
 
     hi def link     crbasicKeyword      Keyword 
     hi def link     crbasicVarTypes     Type 
@@ -74,6 +80,7 @@ if exists("b:current_syntax")
 
     hi def link     crbasicStrings      String 
     hi def link     crbasicOperator     Operator
+    hi def link     crbasicBrackets     Operator
     hi def link     crbasicComment      Comment
     hi def link     crbasicTodo         Todo
 
