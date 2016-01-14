@@ -12,12 +12,14 @@ if exists("b:current_syntax")
     syn keyword     crbasicKeyword      Const Public Alias Units Dim As
     syn keyword     crbasicVarTypes     Float Long String Boolean
     syn keyword     crbasicDataTypes    FP2 IEEE4 FLOAT LONG UINT2 UINT4 BOOLEAN BOOL8 NSEC STRING
-    syn keyword     crbasicStatement    DataInterval Sample Include
+    syn keyword     crbasicStatement    StationName DataInterval Sample Include PreserveVariables
     syn keyword     crbasicStatement    GetRecord TCPOpen SendVariables NetworkTimeProtocal
+    syn keyword     crbasicStatement	Sub EndSub Call CallTable
+    syn keyword     crbasicMeasure	ExciteV VoltSE
     syn keyword     crbasicRepeat       DataTable EndTable BeginProg EndProg SlowSequence EndSequence Scan NextScan
     syn keyword     crbasicMath         Minimum Maximum Average StdDev Sample Totalize WindVector
-    syn keyword     crbasicConditional  If Then Else EndIf Do Loop Until While Wend
-    syn keyword     crbasicLoops        Do Loop Until While Wend For Next
+    syn keyword     crbasicConditional  If Then Else ElseIf EndIf Do Loop Until While Wend
+    syn keyword     crbasicLoops        Do Loop Until While Wend For Next To
     syn keyword     crbasicBools        True False
     syn keyword     crbasicTodo         contained TODO FIXME NOTE NOTES
 
@@ -70,6 +72,7 @@ if exists("b:current_syntax")
     hi def link     crbasicVarTypes     Type 
     hi def link     crbasicDataTypes    Type 
     hi def link     crbasicStatement    Statement
+    hi def link     crbasicMeasure	Statement
     hi def link     crbasicRepeat       Repeat
     hi def link     crbasicMath         Function
     hi def link     crbasicConditional  Conditional
